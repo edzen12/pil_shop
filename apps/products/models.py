@@ -21,7 +21,7 @@ class Product(models.Model):
         return f"{self.name} - {self.categories}"
     
     class Meta:
-        verbose_name_plural = "Продукты"
+        verbose_name_plural = "Товары"
 
     def get_absolute_url(self):
         return reverse('product-detail', kwargs = {"pk" : self.pk})
@@ -63,9 +63,8 @@ class ProductItem(models.Model):
         return reverse('add-to-bookmark', kwargs = {'pk': self.pk})
     
     class Meta:
-        verbose_name_plural = "Позиция товара"
+        verbose_name_plural = "Данные товара"
     
-
 
 
 class ProductItemImage(models.Model):
